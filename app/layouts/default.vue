@@ -1,13 +1,16 @@
 <template>
-        <header>
+        <header style="max-height: 10px">
             <v-app >
-                <v-app-bar height="hv" :elevation="0">
-                    <template v-slot:prepend>
-                        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-                    </template>
-                    <v-app-bar-title>いろはのおうち</v-app-bar-title>
-                    <div class="navigation">
-                        <v-btn variant="text" color="#048db7" size="x-large">
+                <v-app-bar  :elevation="0" >
+                    <!-- <template v-slot:prepend>
+                        <v-app-bar-nav-icon class="header-content" href="/"></v-app-bar-nav-icon>
+                    </template> -->
+                    <a  class="header-icon" href="/">
+                        <font-awesome-icon icon="fa-solid fa-cat" style="height: 50px" />
+                    </a>
+                    <v-app-bar-title class="header-content">いろはのおうち</v-app-bar-title>
+                    <div class="header-content">
+                        <v-btn variant="text" color="#048db7" size="x-large" href="/schedule">
                             予定表
                         </v-btn>
                         <v-btn variant="text" color="#048db7" size="x-large">
@@ -25,15 +28,27 @@
         </header>
         <slot /> 
         <footer>
-            <p>&copy; 2025 My Application</p>
+            <p>&copy; 2025 Iroha Minobe</p>
         </footer>
 </template>
 
 <style>
-.navigation{
+.header-icon{
     margin:25px;
+    padding-top: 3%;   
+    color: #048db7;
+}
+.header-content{
+    margin:25px;
+    padding-top: 2%;
 }
 header{
     height: 100px;
 }
+footer{
+    text-align: center;
+    background-color: #98cfe3;
+    padding: 10px;
+}
 </style>
+
