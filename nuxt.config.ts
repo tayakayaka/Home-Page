@@ -6,6 +6,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  css: ['vuetify/styles'],
+
   components: {
     global:true,
     dirs:["~/components"],

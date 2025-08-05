@@ -1,7 +1,7 @@
 <template>
   <v-app class="bg">
     <v-main>
-      <v-container>
+      <v-container class="top">
         <v-row >
           <!-- 左: カルーセル -->
           <v-col cols="7">
@@ -71,6 +71,9 @@ console.log('pics配列:', pics)
 }
 .bg{
     background-color: #e5f4fb;
+}
+.top{
+  margin-top: 3%;
 }
 .text-green-darken-1 {
   color: #43a047 !important;
